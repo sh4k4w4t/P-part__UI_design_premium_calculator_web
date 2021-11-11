@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body class="container">
+
+  <h2 class="premium-calculator-header-tag btn-success only-margin-class-top" style="text-align: center">Premium Calculator</h2>
+
+  <div class="row">
+    <label class="only-margin-class-buttom only-font-weight-bold">DATE OF BIRTH :</label>
+    <div class="dateOfBirth_width">
+      <div class="form-group">
+        <input type="text" placeholder="DD">
+      </div>
+    </div>
+
+    <div class="dateOfBirth_width">
+      <div class="form-group">
+        <input type="text" placeholder="MM">
+      </div>
+    </div>
+
+    <div class="dateOfBirth_width">
+      <div class="form-group">
+        <input type="text" placeholder="YYYY">
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <p>Your age is: </p>
+
+  <div>
+    <div class="form-group">
+      <label class="only-margin-class-buttom only-font-weight-bold">FAMILY PROTECTION PLANS :</label>
+
+      <select class="form-control" id="family-potection-plan-id" onchange="selectPlanForFamilyPotection(this);">
+        <option value="select_one" selected>Select One</option>
+        <option value="plan_one">Plan_one</option>
+        <option value="plan_two">Plan_two</option>
+      </select>
+    </div>
+  </div>
+  <br>
+
+  <div id="hideSectionForPlan_1" class="hideSectionForPlanClass_1">
+    <div>
+      <div class="form-group">
+        <label class="only-margin-class-buttom only-font-weight-bold">TERM :</label>
+        <select class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="sum-assured-division">
+      <div class="form-group">
+        <label class="only-font-weight-bold">SUM ASSURED :</label><br>
+        <input type="text" placeholder="Type Amount" class="col-12 sum-assured-division-input-1">
+      </div>
+    </div>
+
+
+    <div>
+      <div class="form-group">
+        <label class="only-margin-class-buttom only-font-weight-bold">MODE OF PAYMENT :</label>
+        <select class="form-control">
+          <option value="yearly">Yearly</option>
+          <option value="half-yearly">Half Yearly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      </div>
+    </div>
+    <br>
+
+    <div>
+      <label class="only-margin-class-buttom only-font-weight-bold">SUPPLYMENTARY BENEFITS :</label>
+      <br>
+      <label for="check-Critical-Illness">
+        <input type="checkbox" id="id-Critical-Illness" /> Critical Illness
+      </label>
+      <br>
+
+      <label for="check-Health-Insurance">
+        <input type="checkbox" id="id-Health-Insurance" onclick="healthSectionHide()" /> Health Insurance
+      </label>
+      <br>
+
+      <div class="health-insurance-hide-sec-1 container border only-margin-class-buttom only-margin-class-top" id="health-div-hide">
+        <div class="row">
+
+          <div class="col-6 health-insurance-sec-1 text-white">
+            Hi Plan
+          </div>
+          <div class="col-6 health-insurance-sec-1"><select class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select></div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 health-insurance-sec-1 text-white">
+            Hi Benificiry
+          </div>
+          <div class="col-6 health-insurance-sec-1"><select class="form-control">
+              <option value="self">Self</option>
+              <option value="couple">Couple</option>
+              <option value="family">Family</option>
+            </select></div>
+        </div>
+      </div>
+
+
+
+      <label for="check-pdab">
+        <input type="checkbox" id="id-pdab" /> PDAB
+      </label><br>
+
+      <label for="check-diab">
+        <input type="checkbox" id="id-diab" /> DIAB
+      </label><br>
+
+    </div>
+    <br>
+    <div class="col-md-12 calculate-button-div" id="">
+      <input type="button" value="Calculate" onclick="showCalculateDiv()" />
+    </div>
+
+    <div class="calculate-div-section" id="calculation-div">
+      <div class="row">
+        <div class="col-6">
+          <p>Basic Premium: </p>
+          <p>Critical Illness: </p>
+          <p>Health Insurance:</p>
+          <p>PDAB:</p>
+          <br>
+          <p class="textForBold">Calculate Premium* : </p>
+        </div>
+
+        <div class="col-6 contact-section">
+          <i class="bi bi-telephone-plus"></i> Contact with us
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
